@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: rtch21tdq-python
+  janus-idp.io/tekton: rtch21tdq-python
+  backstage.io/kubernetes-id: rtch21tdq-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: rtch21tdq-python
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
